@@ -29,6 +29,8 @@ with st.sidebar:
     st.title("Auto Machine Learning")
     choice = st.radio("Navigation",["Upload","Profiling","ML","Download"])
     st.info("This app allows to build an automated machine learning ML pipeline")
+    st.info("ML Section IS NOT FUNCTIONAL YET. Outdated pycaret version.")
+    st.info("@nald")
     
 
 if choice == "Upload":
