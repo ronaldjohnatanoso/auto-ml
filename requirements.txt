@@ -1,6 +1,7 @@
-streamlit==0.84.1
-Pillow==8.4.0
-requests==2.26.0
-pandas==1.3.4
+streamlit
+Pillow
+requests
+pandas
 streamlit-pandas-profiling
-pycaret==2.3.4
+pycaret
+numpy
