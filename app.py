@@ -1,4 +1,5 @@
 from io import BytesIO
+import pandas_profiling
 import streamlit as st
 from PIL import Image   
 import requests
@@ -53,9 +54,10 @@ if os.path.exists("sourcedata.csv"):
 if choice == "Profiling":
     st.title("Automated Explanatory Data Analaysis")
     #store the profile report from dataframe
-    profile_report = df.profile_report()
+        # Generate the EDA report
+    profile = pandas_profiling.ProfileReport(df)
     #render the report
-    st_profile_report(profile_report)
+    st_profile_report(profile)
 
 if choice == "ML":
     chosen_target = st.selectbox('Choose the Target Column', df.columns)
@@ -75,6 +77,11 @@ if choice == "ML":
         st.dataframe(compare_df)
         save_model(best_model, 'best_model')
 
+if choice == "Download": 
+    with open('best_model.pkl', 'rb') as f: 
+        st.download_button('Download Model', f, file_name="best_model.pkl")
+        
+        
 if choice == "Download": 
     with open('best_model.pkl', 'rb') as f: 
         st.download_button('Download Model', f, file_name="best_model.pkl")

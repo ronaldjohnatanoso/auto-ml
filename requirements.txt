@@ -5,3 +5,4 @@ pandas
 streamlit-pandas-profiling
 pycaret
 numpy
+pandas-profiling
