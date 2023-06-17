@@ -6,7 +6,6 @@ import pandas as pd
 import os
 
 #profiling for report
-import pandas_profiling
 from streamlit_pandas_profiling import st_profile_report
 
 #ML stuff
