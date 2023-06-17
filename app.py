@@ -11,6 +11,11 @@ from streamlit_pandas_profiling import st_profile_report
 #ML stuff
 from pycaret.classification import setup, compare_models, pull, save_model
 
+# Set the page title
+st.set_page_config(page_title="Auto-ML",page_icon="seph.ico")
+
+
+
 with st.sidebar:
     # Download the image
     response = requests.get("https://www.pngarts.com/files/3/Sephiroth-Transparent-Image.png")
